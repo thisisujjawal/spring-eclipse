@@ -1,0 +1,61 @@
+package com.thisisujjawal;
+
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+public class Person {
+	private String name;
+	private int age;
+	private List<Integer> phoneNumber;
+	private Set<String> movies;
+	private Map<String,String> identity;
+	
+	public Person() {
+		super();
+	}
+	public Person(String name, int age) {
+		super();
+		System.out.println("Constructor called..!");
+		this.name = name;
+		this.age = age;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	public List<Integer> getPhoneNumber() {
+		return phoneNumber;
+	}
+	public void setPhoneNumber(List<Integer> phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+	public Set<String> getMovies() {
+		return movies;
+	}
+	public void setMovies(Set<String> movies) {
+		this.movies = movies;
+	}
+	public Map<String, String> getIdentity() {
+		return identity;
+	}
+	public void setIdentity(Map<String, String> identity) {
+		this.identity = identity;
+	}
+	@Override
+	public String toString() {
+		return "Person [name=" + name + ", age=" + age + ", phoneNumber=" + phoneNumber + ", movies=" + movies
+				+ ", identity=" + identity + "]";
+	}
+	
+	
+	
+}

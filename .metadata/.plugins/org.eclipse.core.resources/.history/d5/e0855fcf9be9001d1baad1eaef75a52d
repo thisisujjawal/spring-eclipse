@@ -1,0 +1,36 @@
+package com.thisisujjawal;
+
+public class Person {
+	private String name;
+	private int age;
+	
+	public Person() {
+		super();
+	}
+	public Person(String name, int age) {
+		super();
+		System.out.println("Constructor called..!");
+		this.name = name;
+		this.age = age;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		System.out.println("setName called ..!");
+		this.name = name;
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		System.out.println("setAge called ..!");
+		this.age = age;
+	}
+	@Override
+	public String toString() {
+		return "Person [name=" + name + ", age=" + age + "]";
+	}
+	
+	
+}
