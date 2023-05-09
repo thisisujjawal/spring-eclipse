@@ -9,6 +9,15 @@ public class Address {
 		super();
 		System.out.println("Address default constructor called..!");
 	}
+	
+	// For constructor injection
+	public Address(String street, int houseNumber) {
+		super();
+		this.street = street;
+		this.houseNumber = houseNumber;
+	}
+
+
 	public String getStreet() {
 		return street;
 	}

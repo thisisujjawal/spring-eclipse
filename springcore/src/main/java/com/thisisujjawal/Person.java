@@ -20,6 +20,19 @@ public class Person {
 		System.out.println("Person default constructor called..!");
 	}
 
+	// For constructor injection
+	public Person(String name, int age, List<String> phoneNumber, Set<String> movies, Map<String, String> identity,
+			Properties prop, Address address) {
+		super();
+		this.name = name;
+		this.age = age;
+		this.phoneNumber = phoneNumber;
+		this.movies = movies;
+		this.identity = identity;
+		this.prop = prop;
+		this.address = address;
+	}
+
 
 	public String getName() {
 		return name;

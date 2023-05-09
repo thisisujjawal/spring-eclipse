@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+  https://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/context
+  http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- In constructor injection, by default it will takes all the values as 
+		String and try to map with suitable constructor, but if it fails to find 
+		such constructor than it will try to map in the constructor declared order fashion -->
+
+	<!-- Throught c schema -->
+	<bean class="com.thisisujjawal.Address" name="address"
+		c:street="ABCD" c:houseNumber="8" />
+
+	<!-- Through tags and attributes -->
+	<bean class="com.thisisujjawal.Person" name="person">
+		<constructor-arg>
+			<value>Ujjawal</value>
+		</constructor-arg>
+		<constructor-arg value="23" type="int"></constructor-arg>
+		<constructor-arg>
+			<list>
+				<value>123</value>
+				<value>456</value>
+				<value>null</value>
+			</list>
+		</constructor-arg>
+		<constructor-arg>
+			<set>
+				<value>DDLJ</value>
+				<value>3 idiots</value>
+				<value>null</value>
+				<value>DDLJ</value>
+			</set>
+		</constructor-arg>
+		<constructor-arg>
+			<map>
+				<entry key="aadhar" value="111122223333"></entry>
+				<entry key="PAN" value="AAAA3333"></entry>
+				<entry key="PAN" value="123456"></entry>
+			</map>
+		</constructor-arg>
+		<constructor-arg>
+			<props>
+				<prop key="hello">world</prop>
+				<prop key="a">b</prop>
+				<prop key="a">c</prop>
+			</props>
+		</constructor-arg>
+		<constructor-arg>
+			<ref bean="address" />
+		</constructor-arg>
+	</bean>
+</beans>

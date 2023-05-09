@@ -6,6 +6,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class App {
 
 	public static void main(String[] args) {
+		
+//		----------------------Setter Injection------------------------------
 		ApplicationContext setterContext = new ClassPathXmlApplicationContext("com/thisisujjawal/springConfig/setterConfig.xml");
 		
 		Person person = (Person) setterContext.getBean("person");
@@ -21,7 +23,17 @@ public class App {
 		System.out.println(person5);
 		//use of Property in java.util
 		System.out.println(person4.getProp().get("hello"));
-
+		
+		
+		
+//		----------------------Constructor Injection---------------------------
+		ApplicationContext constructorContext = new ClassPathXmlApplicationContext("com/thisisujjawal/springConfig/constructorConfig.xml");
+		
+		Person person6 = (Person) constructorContext.getBean("person");
+		Address address = (Address) constructorContext.getBean("address");
+		System.out.println(person6);
+		System.out.println(address);
+		
 	}
 
 }
