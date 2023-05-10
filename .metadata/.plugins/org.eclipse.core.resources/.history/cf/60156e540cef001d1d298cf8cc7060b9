@@ -38,7 +38,6 @@ public class Address {
 	}
 
 //	Init and destroy method (Lifecycle of bean)
-	
 //	Note: init and destroy methods are always public, void and no argument
 	public void init() {
 		// You can initilise DB configuration etc.

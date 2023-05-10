@@ -1,7 +1,6 @@
 package com.thisisujjawal;
 
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class App {
@@ -34,15 +33,6 @@ public class App {
 		Address address = (Address) constructorContext.getBean("address");
 		System.out.println(person6);
 		System.out.println(address);
-		
-		
-//		----------------------Init and Destroy method----------------------------
-
-//		Instead of Application context use AbstractApplicationContext to call destroy method
-		AbstractApplicationContext abstractApplicationContext = new ClassPathXmlApplicationContext("com/thisisujjawal/springConfig/setterConfig.xml");
-		Address address2 = (Address) abstractApplicationContext.getBean("address2");
-		System.out.println(address2);
-		abstractApplicationContext.registerShutdownHook();
 		
 	}
 
